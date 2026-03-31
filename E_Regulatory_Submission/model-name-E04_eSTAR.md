@@ -306,14 +306,22 @@ FDA 2023 Cybersecurity Guidance 핵심 질문 대응:
 
 ---
 
-## 비고: 최소 필수 선택 근거 (개발팀 안내)
+---
+## 비고: 이 문서가 필요한 이유
 
-**왜 이 문서가 FDA 필수인가?**
+### 이 문서가 없으면?
+eSTAR는 FDA 510(k) 전자 제출의 표준 양식으로, 2023년 10월부터 의무화되었다. 구 형식(iSubmitter, Word/PDF 패키지)은 더 이상 수용되지 않으며, eSTAR 형식이 아니면 FDA 접수 포털에서 제출 자체가 차단된다. 각 섹션에 어떤 산출물을 매핑하느냐가 제출 성패를 결정한다. eSTAR는 내부 유효성 검사(Validation Check) 기능이 있어, 필수 섹션 누락 또는 N/A 사유 미기재 시 제출이 자동으로 차단된다. 섹션 구성과 내용 완성도가 FDA 심사관의 AI(Additional Information) 요청 여부를 직접 결정한다.
 
-FDA는 2024년부터 510(k) 전자 제출 시 eSTAR 형식을 의무화하였다. 구 형식(iSubmitter, Word/PDF 패키지)은 더 이상 수용되지 않는다. eSTAR 없이는 FDA에 510(k)를 제출할 수 없으므로 절대적으로 필수이다.
+### 시장별 요구 수준
+| 시장 | 요구 수준 | 설명 |
+|------|----------|------|
+| FDA | 필수 (형식 의무) | 2023년 10월~의무화. eSTAR 형식 외 제출 불가. 섹션 구성이 심사 속도 결정 |
+| MFDS | 해당 없음 | MFDS는 별도 전자 제출 시스템(KFDA NERS) 사용. eSTAR 형식 불적용 |
+| EU MDR | 해당 없음 | EU MDR은 기술 문서(Technical Documentation) 형식으로 NB에 직접 제출. eSTAR 불적용 |
 
-**eSTAR가 단순 양식이 아닌 이유**: eSTAR는 내부 유효성 검사(Validation Check) 기능이 있어, 필수 섹션 누락 또는 N/A 사유 미기재 시 제출이 차단된다. FDA 심사관이 eSTAR를 기반으로 심사를 진행하므로, 섹션 구성과 내용이 심사 속도에 직접적인 영향을 미친다.
+### 최소 필수 vs 리스크 최소화
+- **최소 필수**: eSTAR 필수 섹션(Device Description, Predicate Comparison, Substantial Equivalence Summary, SW 섹션, 사이버보안 섹션)을 완성하고, N/A 처리 항목에 사유를 기재하는 것. model-name는 SW 전용 기기이므로 생체적합성·EMC·멸균·포장 관련 섹션이 N/A 처리되어 제출 패키지가 하드웨어 기기 대비 간결하다.
+- **리스크 최소화**: SBOM(CycloneDX JSON 형식)과 VEX를 기계 판독 가능 형식으로 Section 15에 직접 첨부하고, SW Lifecycle Documentation을 IEC 62304 조항과 매핑하여 제출하면 FDA 심사관이 AI 요청 없이 독자적으로 판단할 수 있어 심사 기간을 단축한다. 2023년 이후 FDA는 SBOM과 VEX를 JSON/XML 원본 파일로 요구하며, PDF 변환본은 수용되지 않는다.
 
-**SW 전용 기기 제출의 장점**: model-name는 SW 전용 기기로 생체적합성, EMC, 멸균/포장 등 다수 섹션이 N/A 처리된다. 이로 인해 전통적인 하드웨어 의료기기 대비 제출 패키지가 간결하다. 다만 SW 섹션(Section 12)과 사이버보안 섹션(Section 15)에 대한 상세한 기술이 요구된다.
-
-**SBOM/VEX 기계 판독 형식 제출**: 2023년 이후 FDA는 SBOM과 VEX를 JSON 또는 XML 형식으로 제출하도록 요구한다. PDF 변환본은 수용되지 않으므로, CycloneDX JSON 원본 파일을 그대로 첨부해야 한다.
+### 외주 개발 시 유의사항
+eSTAR 작성은 RA 전문가가 담당해야 하며, 각 섹션에 매핑되는 내부 산출물의 문서 번호와 버전이 실제 제출 파일과 정확히 일치해야 한다. 외주 RA 컨설턴트가 작성하는 경우, company-name 내부 담당자가 각 산출물 참조 번호를 검토·확인하지 않으면 FDA RTA(Refuse to Accept) 또는 AI 요청의 원인이 된다. eSTAR 제출 전 FDA 제공 eSTAR Validation Tool로 반드시 유효성 검사를 실행할 것.

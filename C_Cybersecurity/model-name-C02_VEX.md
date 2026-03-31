@@ -192,26 +192,29 @@ VEX(Vulnerability Exploitability eXchange)는 SBOM에 포함된 컴포넌트에 
 
 ---
 
-## 비고: 왜 이 문서가 필요한가 (개발팀·경영진을 위한 설명)
+## 비고: 이 문서가 필요한 이유
 
-### ⭐ 리스크 최소화 선택 근거
+### 이 문서가 없으면?
 
-**FDA 강력 권장 (사실상 필수)**  
-FDA Cybersecurity Guidance Feb 2026의 Top Deficiency 목록에 "VEX 미제출 또는 불충분한 취약점 분석"이 명시되어 있다. VEX를 제출하지 않으면 FDA 심사관이 각 CVE에 대해 개별 해명 요청(Deficiency Letter)을 보낼 가능성이 매우 높다. 실무적으로는 "필수"와 동일하게 취급하는 것이 안전하다.
+SBOM(C01)에 CVE(공개 취약점)가 있는데 VEX(Vulnerability Exploitability eXchange)가 없으면, FDA 심사관은 발견된 모든 CVE를 미해결 위험으로 간주한다. SBOM에 수십~수백 개의 CVE가 포함되는 것은 흔한 일이며, VEX 없이 제출하면 CVE 수만큼 deficiency 요청이 올 수 있다. FDA Cybersecurity Guidance Feb 2026의 Top Deficiency 목록에 "VEX 미제출 또는 불충분한 취약점 분석"이 명시되어 있다. 실무적으로 VEX는 "이 CVE가 우리 제품에 실제로 영향을 미치는가?"에 대한 공식 답변서다.
 
-**EU MDR 권장**  
-EU MDR Annex I §17.2는 사이버보안 위험 관리를 요구한다. VEX는 "알려진 취약점을 식별하고 평가했음"을 증명하는 가장 효율적인 수단이다. Notified Body 심사 시 VEX 부재는 추가 증거 요청으로 이어질 수 있다.
+- **FDA**: 2026년 FDA Cybersecurity Guidance Top Deficiency 항목에 직접 포함. VEX 없으면 SBOM의 모든 CVE에 대해 개별 deficiency 요청 발생. deficiency 폭주로 심사가 수개월 연장될 수 있다. "Not Affected" 판정에는 구체적인 기술적 근거가 필요하며, 근거 없는 일괄 Not Affected 처리는 FDA가 수용하지 않는다.
+- **MFDS**: 현재 VEX를 공식 요건으로 규정하지 않는다. 그러나 FDA 제출을 위해 작성한 VEX는 MFDS 제출 시 사이버보안 관리 역량의 증거로 활용할 수 있어 추가 비용 없이 MFDS 대응력을 높인다.
+- **EU MDR**: Annex I §17.2 사이버보안 위험 관리 요건의 이행 수단. Notified Body는 VEX를 "알려진 취약점을 평가했음"의 증거로 평가하며, 부재 시 추가 증거 요청으로 이어진다.
 
-**MFDS (해당 없음 → 향후 준비)**  
-현재 MFDS는 VEX를 공식 요건으로 규정하지 않으나, FDA 제출 과정에서 작성한 VEX를 MFDS 제출에도 참조 자료로 활용할 수 있어 추가 비용 없이 MFDS 대응력을 높일 수 있다.
+### 시장별 요구 수준
 
-### 개발팀 실무 가이드
+| 시장 | 요구 수준 | 설명 |
+|------|----------|------|
+| FDA | 필수 | 2026 Guidance Top Deficiency 직접 포함. VEX 없으면 SBOM CVE 전체에 개별 deficiency 발생 |
+| MFDS | 권장 | 공식 의무 없음. FDA 대응 과정에서 작성 후 MFDS 사이버보안 역량 증거로 활용 가능 |
+| EU MDR | 권장 | Annex I §17.2 이행 수단. Notified Body 추가 증거 요청 예방 효과 |
 
-**단계별 접근 권장**:  
-1. SBOM 기반으로 Grype/Trivy 실행 → CVE 목록 추출 (수십~수백 개 가능)  
-2. CVSS Critical/High 우선 분석 (일반적으로 10~20개 수준)  
-3. 코드 리뷰로 "이 기능을 model-name가 실제로 사용하는가?" 판정  
-4. Medium/Low는 "Not Affected" 또는 "Under Investigation"으로 일괄 처리 후 순차 분석  
+### 최소 필수 vs 리스크 최소화
 
-**"Not Affected" 판정 시 핵심**:  
-근거가 모호하면 FDA가 수용하지 않는다. "해당 기능 미사용"보다는 "파일 `X.cs` 라인 Y에서 해당 API가 호출되지 않음을 확인" 수준의 구체성이 필요하다.
+- **최소 필수로 작성할 경우**: SBOM의 모든 CVE에 대해 CVSS Critical/High를 우선으로 분석하고, 각 CVE에 대해 Affected/Not Affected/Under Investigation 중 하나의 상태를 부여한다. "Not Affected" 판정 시 "해당 기능을 model-name가 사용하지 않음"과 같은 구체적인 기술적 근거를 반드시 기술한다. Affected인 경우 완화 조치 또는 패치 계획을 포함한다.
+- **리스크 최소화로 확장할 경우**: Grype/Trivy를 CI/CD에 통합하여 새로운 CVE가 발견될 때마다 자동 알림을 받으면 VMP(C07)의 지속적 모니터링 의무를 자동화할 수 있다. VEX를 CycloneDX VEX 형식으로 작성하면 SBOM과 기계 판독 방식으로 연결되어 FDA 심사관이 자동화 도구로 교차검증할 때도 일관성이 유지된다. "Under Investigation" 항목에 대해 조사 완료 일정을 명시하면 FDA가 "미해결 위험"이 아닌 "관리 중인 위험"으로 분류하여 deficiency 발행을 보류하는 경우가 있다.
+
+### 외주 개발 시 유의사항
+
+VEX는 소프트웨어의 내부 코드 구조와 기능 사용 여부를 알아야 작성할 수 있다. 외주사가 개발한 소프트웨어의 경우, 어떤 기능이 어떤 라이브러리를 어떻게 사용하는지에 대한 정보가 없으면 VEX 작성이 불가능하다. SOW에 다음을 명시할 것: ① 외주사는 납품 시 각 SOUP 컴포넌트의 사용 방식 설명서(어떤 API/함수를 어떤 목적으로 호출하는지) 제출 의무, ② VEX 작성을 위한 코드 분석 지원 의무(계약 종료 후 최소 6개월), ③ 새로운 CVE 발견 시 외주사가 "Not Affected" 판정 근거를 company-name에 제공하는 지원 계약 유지 권장.

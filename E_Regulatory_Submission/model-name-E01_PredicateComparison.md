@@ -183,17 +183,22 @@ FDA는 다음 두 조건을 모두 충족할 때 SE를 인정한다:
 
 ---
 
-## 비고: 최소 필수 선택 근거 (개발팀 안내)
+---
+## 비고: 이 문서가 필요한 이유
 
-**왜 이 문서가 FDA 필수인가?**
+### 이 문서가 없으면?
+510(k)의 핵심 논리는 "이 제품은 이미 허가된 기기와 실질적으로 동등하다"는 증명이다. Predicate Comparison 없이는 이 논리 자체를 제시할 수 없으므로 FDA 510(k) 제출이 불가능하다. 21 CFR §807.87(f)는 Predicate Device와의 비교 정보 포함을 의무화하며, FDA eSTAR의 Section 10(Substantial Equivalence Comparison)이 이 문서의 내용을 직접 입력·참조한다. 이 문서 없이 eSTAR를 완성할 수 없고, eSTAR 미완성은 곧 접수 불가(RTA)를 의미한다.
 
-21 CFR §807.87(f)는 510(k) 제출 시 Predicate Device와의 비교 정보를 반드시 포함하도록 의무화한다. FDA eSTAR v6.1의 Section 10(Substantial Equivalence Comparison)이 이 문서의 내용을 직접 입력 또는 참조한다. 이 문서 없이 eSTAR 완성 불가 = 510(k) 제출 불가.
+### 시장별 요구 수준
+| 시장 | 요구 수준 | 설명 |
+|------|----------|------|
+| FDA | 필수 | 21 CFR §807.87(f) 명시 의무. eSTAR Section 10에 직접 입력 필요. 미포함 시 RTA(접수 거절) |
+| MFDS | 해당 없음 | MFDS 허가 경로는 Predicate 비교 방식이 아닌 기술 문서 심사 방식으로 진행 |
+| EU MDR | 해당 없음 | EU MDR은 Predicate 비교 대신 GSPR(E03) 및 CER(F01) 기반 적합성 평가 방식 사용 |
 
-**Predicate 선택 전략 (개발팀 안내)**:
-- **최신 Predicate 우선**: K251410(VXvue, 2025년)이 가장 최신 허가로, 현행 FDA 심사 기준을 반영. 주 Predicate로 권장.
-- **Split Predicate 허용**: 의도된 사용은 Predicate A, 기술 특성은 Predicate B에서 가져오는 전략. 단, FDA 가이드라인 준수 요건 확인 필요.
-- **한국산 Predicate 전략적 장점**: EConsole1, VXvue, XmaruView 모두 한국 제조사 제품으로 model-name와 동일한 DR 검출기 생태계에서 개발. 기술 특성 유사성 강조에 유리.
+### 최소 필수 vs 리스크 최소화
+- **최소 필수**: 의도된 사용(Intended Use) 비교, 기술 특성(Technical Characteristics) 비교, 차이점 설명 및 "새로운 위험 없음" 논거. 이 세 가지 없이 510(k) 심사관이 실질적 동등성을 판단할 수 없어 Additional Information(AI) 요청이 확실시된다.
+- **리스크 최소화**: 성능 데이터 비교표(감도·특이도·정확도)와 소프트웨어 버전별 검증 데이터까지 포함하면 심사관이 AI 요청 없이 독자적으로 판단 가능해 심사 기간을 평균 30~60일 단축할 수 있다. 최신 Predicate(K251410, VXvue 2025년)를 주 Predicate로 활용하면 현행 FDA 심사 기준 충족에 유리하다.
 
-**작성 주의사항**:
-- Predicate의 의도된 사용 원문은 반드시 FDA 510(k) 데이터베이스(https://www.fda.gov/medical-devices/510k-clearances)에서 해당 K번호 결정 서한을 조회하여 정확히 기재.
-- 차이점이 있더라도 "차이점이 새로운 위험을 유발하지 않는다"는 논리적 설명을 반드시 포함.
+### 외주 개발 시 유의사항
+Predicate의 의도된 사용 원문은 반드시 FDA 510(k) 데이터베이스(https://www.fda.gov/medical-devices/510k-clearances)에서 해당 K번호 결정 서한을 직접 조회하여 기재해야 한다. 외주 RA 컨설턴트가 작성하더라도 company-name 내부 담당자가 원문과 대조·검토하지 않으면 인용 오류로 FDA AI 요청을 받는 사례가 빈번하다. Split Predicate 전략(의도된 사용과 기술 특성을 서로 다른 Predicate에서 인용) 사용 시 사전에 FDA Pre-Sub 미팅을 통해 전략 유효성을 확인하는 것을 권장한다.
