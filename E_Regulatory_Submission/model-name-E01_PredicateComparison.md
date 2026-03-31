@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ✅ 최소 필수 — FDA 510(k) 심사에서 실질적 동등성(SE) 입증의 핵심 문서. eSTAR v6.1 Section 10에 직접 삽입/참조. 이 문서 없이 510(k) 심사 진입 불가.
 > **적용 시장**: FDA (510(k) 전용)
 > **근거 규격**: 21 CFR §807.87(f), FDA 510(k) Substantial Equivalence Decision Making Process Guidance, FDA eSTAR v6.1 Section 10
@@ -35,7 +35,7 @@ FDA는 다음 두 조건을 모두 충족할 때 SE를 인정한다:
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 제조사 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 제조사 | company-name |
 | 제조 국가 | 대한민국 |
 | 제품 코드 | LLZ |
 | 분류 규정 | 21 CFR 892.2050 (Picture Archiving and Communications System) |

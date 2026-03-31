@@ -18,19 +18,27 @@
 
 ## 사용 방법
 
-### 1단계: 제품명 치환
+### 1단계: 제품명 및 회사명 치환
 
-모든 파일과 파일명에서 `model-name`을 실제 제품/모델명으로 일괄 치환합니다.
+모든 파일과 파일명에서 placeholder를 실제 값으로 일괄 치환합니다.
 
 ```bash
-# 파일 내용 치환
+# 제품명 치환 (파일 내용)
 find . -name '*.md' -exec sed -i 's/model-name/YourProduct/g' {} +
+
+# 회사명 치환 (파일 내용)
+find . -name '*.md' -exec sed -i 's/company-name/YourCompany Co., Ltd./g' {} +
 
 # 파일명 치환
 for f in $(find . -name 'model-name-*'); do
   mv "$f" "$(echo $f | sed 's/model-name/YourProduct/g')"
 done
 ```
+
+> 또는 `scripts/init.sh` 스크립트를 사용하면 한 번에 처리됩니다.
+> ```bash
+> bash scripts/init.sh --product "YourProduct" --company "YourCompany Co., Ltd."
+> ```
 
 ### 2단계: 작성 순서에 따라 문서 작성
 
@@ -88,6 +96,53 @@ software-templates/
     ├── model-name-F01_CER.md                    Clinical Evaluation Report
     └── model-name-F02_PMS_PMCF.md               PMS / PMCF Package
 ```
+
+---
+
+## 커버리지 매트릭스 (Coverage Matrix)
+
+> 30종 산출물 × 3개 시장 전체 매핑. ✅ 필수 | ⭐ 리스크 최소화 | △ 참조 | ○ N/A
+
+| # | 산출물 | 그룹 | FDA | MFDS | EU MDR | 작성 |
+|---|--------|------|-----|------|--------|------|
+| 1 | SW 요구사항 명세서 (SRS) | A | ✅ | ✅ | ✅ | ✅ |
+| 2 | SW 아키텍처 설계서 (SAD) | A | ✅ | ✅ | ✅ | ✅ |
+| 3 | SW 상세 설계서 (SDD) | A | ○ | △ | △ | ❌ |
+| 4 | SOUP 목록 | A | ✅ | ✅ | ✅ | ✅ |
+| 5 | SBOM (Machine-readable) | C | ✅ | ⭐ | ✅ | ✅ |
+| 6 | VEX 리포트 | C | ⭐ | ○ | ⭐ | ✅ |
+| 7 | 8대 보안 통제 명세서 | C | ⭐ | ⭐ | ✅ | ✅ |
+| 8 | 통합 시험 결과서 | B | ✅ | ✅ | ✅ | ✅ |
+| 9 | 시스템 시험 결과서 | B | ✅ | ✅ | ✅ | ✅ |
+| 10 | 단위 시험 (Unit Test) | B | ○ | ○ | ○ | ❌ |
+| 11 | 추적성 매트릭스 (RTM) | B | ✅ | ✅ | ✅ | ✅ |
+| 12 | 위협 모델 (Threat Model) | C | ✅ | ⭐ | ✅ | ✅ |
+| 13 | 보안 위험 평가 | C | ✅ | ⭐ | ✅ | ✅ |
+| 14 | 침투 테스트 + Retest | C | ✅ | ○ | ⭐ | ✅ |
+| 15 | 취약점 관리 계획 | C | ✅ | ⭐ | ✅ | ✅ |
+| 16 | 위험 관리 파일 (ISO 14971) | D | ✅ | ✅ | ✅ | ✅ |
+| 17 | 알려진 결함 목록 | A | ✅ | ✅ | ✅ | ✅ |
+| 18 | SW 릴리즈 기록 | A | ✅ | ✅ | ✅ | ✅ |
+| 19 | 소스코드/빌드 환경 | A | ✅ | ✅ | △ | ✅ |
+| 20 | 사용적합성 평가 (Usability) | B | ✅ | ✅ | ✅ | ✅ |
+| 21 | 임상 평가/동등성 비교 | B | ✅ | △ | ✅ | ✅ |
+| 22 | 라벨링/IFU | E | ✅ | ✅ | ✅ | ✅ |
+| 23 | IEC 81001-5-1 준수 문서 | D | ⭐ | ○ | ⭐ | ✅ |
+| 24 | CER (임상 평가 보고서) | F | ○ | ○ | ✅ | ✅ |
+| 25 | PMS/PMCF 통합 패키지 | F | ○ | ○ | ✅ | ✅ |
+| 26 | GSPR 체크리스트 | E | ○ | ○ | ✅ | ✅ |
+| 27 | SW 개발 계획서 (SDP) | A | ✅ | ✅ | ✅ | ✅ |
+| 28 | 형상관리 계획서 (CMP) | A | ✅ | ✅ | ✅ | ✅ |
+| 29 | Predicate 비교표 | E | ✅ | ○ | ○ | ✅ |
+| 30 | eSTAR v6.1 제출 가이드 | E | ✅ | ○ | ○ | ✅ |
+
+### 시장별 요약
+
+| 시장 | 필수 (✅) | 리스크 최소화 (⭐) | 합계 |
+|------|:---------:|:-----------------:|:----:|
+| **FDA 510(k)** | 22 | 3 | 25 |
+| **MFDS 2등급** | 17 | 6 | 23 |
+| **EU MDR Class IIa** | 21 | 5 | 26 |
 
 ---
 

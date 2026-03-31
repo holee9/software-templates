@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ⭐ 리스크 최소화 (EU MDR 필수) — EU MDR은 시판 전보다 시판 후 의무가 더 엄격하다. PSUR 미제출, PMCF 보고서 미갱신 시 CE 마킹 정지 가능. 한국 기업이 EU 진출 시 가장 많이 놓치는 의무 중 하나이다.
 > **적용 시장**: EU MDR (필수) — FDA MDR(Medical Device Reporting)은 별도 절차로 본 문서에 미포함
 > **근거 규격**: EU MDR 2017/745 Article 83~86, Annex III (시판후 감시 기술 문서), Annex XIV Part B (PMCF), MDCG 2020-7 (PMS 가이드라인), MDCG 2020-8 (PMCF 가이드라인)

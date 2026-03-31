@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA (510k 핵심) / EU MDR (CER 일부)  
 > **근거 규격**: 21 CFR §807.87(f), FDA 510(k) SE Guidance, EU MDR Art.61, EU MDR Annex XIV, MEDDEV 2.7/1 rev.4  
@@ -53,7 +53,7 @@
 | 항목 | 내용 |
 |------|------|
 | 제품명 | model-name Console SW |
-| 제조사 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 제조사 | company-name |
 | SW 버전 | v[작성 필요] |
 | FDA 제품 코드 | LLZ |
 | FDA 분류 규정 | 21 CFR 892.2050, Class II |
@@ -275,7 +275,7 @@
 
 > **FDA 510(k) 실질적 동등성 선언**:
 
-"model-name Console SW (H&abyz Co., Ltd.)는 의도된 사용, 기술적 특성, 임상적 성능 측면에서 Predicate Device VXvue (Vieworks, K251410)와 실질적으로 동등하다. 기술적 차이점이 존재하는 경우, 해당 차이점은 안전성 또는 효과성에 관한 새로운 의문을 제기하지 않으며 model-name가 동등하거나 더 안전함을 확인하였다."
+"model-name Console SW (company-name)는 의도된 사용, 기술적 특성, 임상적 성능 측면에서 Predicate Device VXvue (Vieworks, K251410)와 실질적으로 동등하다. 기술적 차이점이 존재하는 경우, 해당 차이점은 안전성 또는 효과성에 관한 새로운 의문을 제기하지 않으며 model-name가 동등하거나 더 안전함을 확인하였다."
 
 [작성 필요 — 구체적 근거 문장으로 대체]
 

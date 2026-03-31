@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA / MFDS / EU MDR  
 > **근거 규격**: IEC 62304 §5.6, FDA SW Guidance Section IV-E  
@@ -45,7 +45,7 @@
 | 항목 | 내용 |
 |------|------|
 | 제품명 | model-name Console SW |
-| 제조사 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 제조사 | company-name |
 | SW 버전 | v[작성 필요] |
 | 빌드 번호 | [작성 필요] |
 | 형상 기준선(Baseline) | model-name-A05 §[작성 필요] 참조 |

@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수 (FDA / EU MDR) | ⭐ 리스크 최소화 (MFDS)  
 > **적용 시장**: FDA (필수), EU MDR (필수), MFDS (권장)  
 > **근거 규격**: FD&C Act §524B(b)(3), FDA Cybersecurity Guidance (Feb 2026), Executive Order 14028 (SBOM), SPDX 2.3 또는 CycloneDX 1.5  
@@ -31,7 +31,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 회사명 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 회사명 | company-name |
 | SW 버전 | v[작성 필요] |
 | SBOM 파일명 | `model-name-v[작성 필요]-sbom.[spdx.json / bom.json]` |
 | SBOM 파일 해시 (SHA-256) | [작성 필요] |
@@ -83,7 +83,7 @@
 
 | 구분 | 컴포넌트 수 | 비고 |
 |---|---|---|
-| 1st Party (자체 개발 모듈) | [작성 필요] | H&abyz 내부 개발 |
+| 1st Party (자체 개발 모듈) | [작성 필요] | company-name 내부 개발 |
 | 3rd Party — 오픈소스 (OSS) | [작성 필요] | 라이선스 검토 필요 |
 | 3rd Party — 상용 라이브러리 | [작성 필요] | 공급사 계약 확인 |
 | 3rd Party — OS/런타임 의존성 | [작성 필요] | .NET Runtime, Windows 구성 요소 등 |
@@ -97,8 +97,8 @@
 
 | # | 패키지 이름 | 버전 | 공급사 | PURL (Package URL) | 라이선스 | 해시 (SHA-256, 앞 8자리) | EOS 날짜 | 관계 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | model-name.Core | [작성 필요] | H&abyz Co., Ltd. | `pkg:nuget/model-name.Core@[버전]` | Proprietary | [작성 필요] | [해당 없음] | DESCRIBES |
-| 2 | model-name.Viewer | [작성 필요] | H&abyz Co., Ltd. | `pkg:nuget/model-name.Viewer@[버전]` | Proprietary | [작성 필요] | [해당 없음] | CONTAINS |
+| 1 | model-name.Core | [작성 필요] | company-name | `pkg:nuget/model-name.Core@[버전]` | Proprietary | [작성 필요] | [해당 없음] | DESCRIBES |
+| 2 | model-name.Viewer | [작성 필요] | company-name | `pkg:nuget/model-name.Viewer@[버전]` | Proprietary | [작성 필요] | [해당 없음] | CONTAINS |
 | 3 | DCMTK | 3.6.8 | OFFIS e.V. | `pkg:github/DCMTK/DCMTK@3.6.8` | BSD-3-Clause | [작성 필요] | [작성 필요] | CONTAINS |
 | 4 | OpenSSL | 3.x.x | OpenSSL Project | `pkg:openssl/openssl@3.x.x` | Apache-2.0 | [작성 필요] | [작성 필요] | CONTAINS |
 | 5 | .NET Runtime | 8.0.x | Microsoft | `pkg:nuget/Microsoft.NETCore.App@8.0.x` | MIT | [작성 필요] | 2026-11-10 | CONTAINS |

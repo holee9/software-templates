@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ✅ 최소 필수 — 2024년부터 FDA는 510(k) 제출 시 eSTAR 형식을 의무화. 구 형식(iSubmitter 등)은 더 이상 수용되지 않는다. eSTAR가 없으면 FDA에 510(k)를 제출할 수 없다.
 > **적용 시장**: FDA (전용)
 > **근거 규격**: FDA eSTAR v6.1 (Electronic Submission Template and Resource), 21 CFR §807 Subpart E, FDA SW Guidance (2023), FDA Cybersecurity Guidance (2023)
@@ -129,7 +129,7 @@ Re: 510(k) Premarket Notification for model-name Console Software
 
 Dear FDA Reviewer:
 
-H&abyz Co., Ltd. (hereinafter "H&abyz") is pleased to submit 
+company-name (hereinafter "company-name") is pleased to submit 
 this 510(k) Premarket Notification for model-name Console Software 
 ("model-name"), a Class II medical device software intended for the 
 acquisition, display, processing, storage, and transmission of 
@@ -167,7 +167,7 @@ For questions regarding this submission, please contact:
 
   [RA 담당자 이름]
   [직책], Regulatory Affairs
-  H&abyz Co., Ltd.
+  company-name
   [주소], Republic of Korea
   Tel: [전화번호]
   Email: [이메일]
@@ -183,7 +183,7 @@ Sincerely,
 ________________________________
 [서명]
 [이름]
-[직책], H&abyz Co., Ltd.
+[직책], company-name
 ```
 
 ---

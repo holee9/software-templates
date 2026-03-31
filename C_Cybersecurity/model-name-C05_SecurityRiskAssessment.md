@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA, EU MDR  
 > **근거 규격**: FDA Cybersecurity Guidance (Feb 2026), AAMI TIR57:2016, ISO 14971:2019 §4~8, IEC 81001-5-1:2021, MDCG 2019-16  
@@ -19,7 +19,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 회사명 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 회사명 | company-name |
 | SW 버전 | v[작성 필요] |
 | IEC 62304 SW 클래스 | Class B |
 | 의존 문서 | model-name-C04 (위협 모델), model-name-D01 (위험 관리 파일) |

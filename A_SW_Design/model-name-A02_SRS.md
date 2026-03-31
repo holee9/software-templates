@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA ✅ / MFDS ✅ / EU MDR ✅  
 > **근거 규격**: IEC 62304 §5.2, FDA SW Guidance (2019) Section IV-B, MFDS 안내서-1425-01 §3.2  
@@ -77,7 +77,7 @@ FDA 510(k) 실질적 동등성 증명, MFDS 기능 목록 제출, EU MDR Annex I
 | FOV | Field of View — 시야 범위 |
 | TLS | Transport Layer Security — 전송 계층 보안 프로토콜 |
 | DR | Digital Radiography — 디지털 방사선 촬영 |
-| model-name | H&abyz Console SW 제품명 |
+| model-name | company-name Console SW 제품명 |
 
 ---
 

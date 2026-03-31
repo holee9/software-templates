@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ✅ 최소 필수 — ISO 14971:2019 기반 전사 위험 관리. FDA/MFDS/EU MDR 3개 시장 모두 법적 의무 요건이며, 모든 그룹(A~F) 산출물에 입력값을 제공하는 기반 문서이다.
 > **적용 시장**: FDA / MFDS / EU MDR (전 시장 공통)
 > **근거 규격**: ISO 14971:2019, IEC 80001-1, MFDS 안내서-1425-01 §4, EU MDR 2017/745 Annex I §3
@@ -57,7 +57,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 제조사 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 제조사 | company-name |
 | 버전 | [X.X.X] |
 | 플랫폼 | Windows PC (독립형 SW) |
 | IEC 62304 분류 | Class B / FDA Basic Level |

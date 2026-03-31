@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA ✅ / MFDS ✅ / EU MDR ✅  
 > **근거 규격**: IEC 62304 §6.2.3, FDA SW Guidance (2019) Section IV-J, MFDS 안내서-1425-01  

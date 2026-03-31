@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ⭐ 리스크 최소화 (EU MDR 필수) — EU MDR CE 마킹 추진 시 CER은 Notified Body 기술 문서 심사의 핵심 필수 요건이다. CER 없이 Class IIa EU MDR CE 마킹 취득 불가. FDA 510(k)에는 직접 요구되지 않으나 EU MDR 동시 추진 전략(Plan B)에서는 필수이다.
 > **적용 시장**: EU MDR (필수) — FDA는 model-name-B05 (임상 평가/동등성 비교)로 대응
 > **근거 규격**: EU MDR 2017/745 Article 61, Annex XIV Part A, MEDDEV 2.7/1 rev.4, MDCG 2020-5, MDCG 2020-13
@@ -39,7 +39,7 @@
 | 전문 분야 | [방사선과학 / 의료기기 규제과학 — 작성 필요] |
 | 임상 평가 관련 경력 | [최소 5년 — 작성 필요] |
 | EU MDR CER 작성 경험 | [작성 필요] |
-| 이해충돌 선언 | H&abyz와 재정적 이해관계 없음 확인 (서명): ____________ |
+| 이해충돌 선언 | company-name와 재정적 이해관계 없음 확인 (서명): ____________ |
 
 ### 1.3 관련 의존 문서
 
@@ -73,7 +73,7 @@
 | 항목 | 내용 |
 |---|---|
 | 기기명 | model-name Console SW |
-| 제조사 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 제조사 | company-name |
 | EU MDR 분류 | Class IIa, Rule 11 (SW 의료기기) |
 | 의도된 사용 | 면허를 보유한 의료 전문가가 DR 검출기로 취득한 X-ray 영상을 표시, 처리, 저장 및 PACS로 전송 |
 | 의도된 사용자 | 면허를 보유한 방사선 기사 및 방사선과 전문의 |

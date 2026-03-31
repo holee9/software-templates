@@ -7,7 +7,7 @@
 > **검토자**: ____________
 > **승인자**: ____________
 > **제품**: model-name Console SW
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)
+> **회사**: company-name
 > **분류**: ✅ 최소 필수 — FDA/MFDS/EU MDR 3개 시장 모두 라벨링 및 IFU를 법적 의무로 요구. SW 출시 전 반드시 확정. IFU 내용 자체가 사용적합성 평가(model-name-B04) 대상이므로 초안을 조기 작성 후 사용성 테스트에 포함할 것.
 > **적용 시장**: FDA / MFDS / EU MDR (각 시장별 버전 분리)
 > **근거 규격**: 21 CFR §801, EU MDR 2017/745 Annex I Chapter III §23, MFDS 의료기기 표시기재 등에 관한 규정, IEC 62366-1:2015/AMD1:2020 §5.9
@@ -28,7 +28,7 @@ FDA 21 CFR §801 요건 준수 라벨. 제품 패키지(설치 미디어 또는 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 model-name Console Software  v[X.X.X]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Manufacturer:  H&abyz Co., Ltd.
+Manufacturer:  company-name
                [주소 — 도로명, 도시명], Republic of Korea
                Tel: [전화번호]
                Email: info@h-abyz.com
@@ -199,7 +199,7 @@ model-name Console Software is a standalone medical device software application 
 | E-003 | "Authentication Failed" | 잘못된 로그인 정보 또는 계정 잠김 | 비밀번호 확인, 관리자에게 계정 잠금 해제 요청 |
 | E-004 | "Disk Space Insufficient" | 저장 공간 부족 | 로컬 스토리지 여유 공간 확보 또는 오래된 데이터 삭제 |
 | E-005 | "TLS Handshake Failed" | TLS 인증서 오류 또는 버전 불일치 | IT 관리자에게 TLS 설정 확인 요청 |
-| E-006 | "License Validation Failed" | 라이선스 만료 또는 비인가 복사 | H&abyz 기술 지원팀 연락 |
+| E-006 | "License Validation Failed" | 라이선스 만료 또는 비인가 복사 | company-name 기술 지원팀 연락 |
 | [추가] | [작성 필요] | | |
 
 ---
@@ -240,7 +240,7 @@ model-name Console Software is a standalone medical device software application 
 보안 취약점 발견 시 아래로 신고:
 - 이메일: security@h-abyz.com
 - 응답 목표: 3영업일 이내
-- 처리 절차: H&abyz 취약점 공시 정책(VDP) 준수
+- 처리 절차: company-name 취약점 공시 정책(VDP) 준수
 
 ---
 
@@ -259,7 +259,7 @@ model-name Console Software is a standalone medical device software application 
 **10.2 소프트웨어 업데이트 절차**
 
 1. 업데이트 알림 수신 (제품 내 알림 또는 이메일)
-2. H&abyz 공식 다운로드 페이지에서 업데이트 파일 수령
+2. company-name 공식 다운로드 페이지에서 업데이트 파일 수령
 3. SHA-256 해시 검증 후 설치
 4. 설치 완료 후 기본 동작 확인
 
@@ -315,7 +315,7 @@ model-name Console Software is a standalone medical device software application 
 | 제조업허가번호 | 제[XXXX]-[XXXXX]호 |
 | 의료기기 허가번호 | 제[XXXX]-[XXXXX]호 |
 | 한글 제품명 | model-name 콘솔 소프트웨어 |
-| 제조원 | 에이치앤아비즈 주식회사 (H&abyz Co., Ltd.) |
+| 제조원 | company-name 주식회사 (company-name) |
 | 제조원 주소 | [한국 주소 — 도로명주소] |
 | 생산 연월일 / SW 버전 | v[X.X.X] (____년 __월 __일) |
 | 보관 및 취급 방법 | 전자 배포, OS 지원 환경에서 운용 |

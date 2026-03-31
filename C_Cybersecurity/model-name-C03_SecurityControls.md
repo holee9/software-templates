@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ⭐ 리스크 최소화 (FDA 2026 mandatory) | ✅ EU MDR | ⭐ MFDS  
 > **적용 시장**: FDA (필수), EU MDR (필수), MFDS (권장)  
 > **근거 규격**: FDA Cybersecurity Guidance (Feb 2026) §IV Appendix 1, FD&C Act §524B(b)(2), NIST SP 800-213, NIST SP 800-82 Rev.3  
@@ -19,7 +19,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 회사명 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 회사명 | company-name |
 | SW 버전 | v[작성 필요] |
 | IEC 62304 SW 클래스 | Class B |
 | 의존 문서 | model-name-A01 (SRS), model-name-C01 (SBOM), model-name-C04 (위협 모델) |

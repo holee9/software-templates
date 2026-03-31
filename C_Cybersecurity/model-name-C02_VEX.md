@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ⭐ 리스크 최소화 (FDA 강력 권장) | ⭐ EU MDR 권장  
 > **적용 시장**: FDA (강력 권장), EU MDR (권장), MFDS (해당 없음)  
 > **근거 규격**: FDA Cybersecurity Guidance (Feb 2026), FDA Top Deficiency 대응, CISA VEX 가이드라인, CycloneDX VEX 1.5, OpenVEX v0.2.0  
@@ -19,7 +19,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 회사명 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 회사명 | company-name |
 | SW 버전 | v[작성 필요] |
 | 기준 SBOM 문서 | model-name-C01 v[작성 필요] |
 | 기준 SBOM 파일 | `model-name-v[버전]-sbom.[spdx.json / bom.json]` |

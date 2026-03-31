@@ -7,7 +7,7 @@
 > **검토자**: ____________  
 > **승인자**: ____________  
 > **제품**: model-name Console SW  
-> **회사**: H&abyz Co., Ltd. (에이치앤아비즈)  
+> **회사**: company-name  
 > **분류**: ✅ 최소 필수  
 > **적용 시장**: FDA, EU MDR  
 > **근거 규격**: FDA Cybersecurity Guidance (Feb 2026) §III-B, STRIDE 방법론, NIST SP 800-154, MDCG 2019-16  
@@ -19,7 +19,7 @@
 | 항목 | 내용 |
 |---|---|
 | 제품명 | model-name Console SW |
-| 회사명 | H&abyz Co., Ltd. (에이치앤아비즈) |
+| 회사명 | company-name |
 | SW 버전 | v[작성 필요] |
 | 위협 모델 방법론 | STRIDE (Microsoft) |
 | IEC 62304 SW 클래스 | Class B |
@@ -83,7 +83,7 @@ model-name Console SW는 디지털 X-ray 영상 검출기(DR Detector)로부터 
        ▲
        │ SW 업데이트 (서명된 패키지, 수동 설치)
        │
-  [H&abyz 배포 서버 / USB 매체]   ← 신뢰 경계 외부
+  [company-name 배포 서버 / USB 매체]   ← 신뢰 경계 외부
 ```
 
 ### 3.2 DFD Level 1 — model-name 내부 구성
@@ -122,7 +122,7 @@ model-name Console SW는 디지털 X-ray 영상 검출기(DR Detector)로부터 
 
 | 경계 ID | 경계 설명 | 경계 내부 | 경계 외부 | 통제 방법 |
 |---|---|---|---|---|
-| TB-001 | 병원 내부 LAN 경계 | model-name, PACS, HIS, DR Detector | 인터넷, 외부 망 | 병원 방화벽 (H&abyz 통제 외) |
+| TB-001 | 병원 내부 LAN 경계 | model-name, PACS, HIS, DR Detector | 인터넷, 외부 망 | 병원 방화벽 (company-name 통제 외) |
 | TB-002 | model-name 애플리케이션 경계 | model-name 프로세스 내부 | OS, 기타 애플리케이션 | OS 접근 제어, 코드 서명 |
 | TB-003 | 사용자 인터페이스 경계 | model-name 내부 세션 | 미인증 사용자 입력 | 인증/인가 모듈 |
 | TB-004 | DICOM 통신 경계 | model-name ↔ PACS/DR Detector | 네트워크 전송 중 | TLS 1.2+ (DICOM TLS) |
